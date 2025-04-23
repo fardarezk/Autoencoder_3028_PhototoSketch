@@ -3,7 +3,7 @@
  
 Database ini mencakup 188 wajah dari database mahasiswa Chinese University of Hong Kong (CUHK), 123 wajah dari database AR, dan 295 wajah dari database XM2VTS. Total terdapat 606 wajah. Untuk setiap wajah, tersedia sebuah sketsa yang digambar oleh seorang seniman berdasarkan foto yang diambil dengan pose frontal, di bawah pencahayaan normal, dan dengan ekspresi netral. Di bawah ini disediakan beberapa pasangan (foto dan sketsa) yang disediakan oleh penulis masing-masing dari ARFACE, database Mahasiswa CUHK, dan XM2VTS.
 
-#Arsitektur Autoencoder
+**#Arsitektur Autoencoder**
 Terdiri dari 2 bagian utama : 
 - Encoder : Mengecilkan ukuran gambar (downsampling) dan mengekstrak fitur penting.
 - Decoder : Mengembalikan representasi kecil tadi menjadi gambar utuh kembali (upsampling).
@@ -39,7 +39,7 @@ Terdiri dari 2 bagian utama :
 5. Loss & Optimizer
    model.compile(optimizer='adam', loss='mean_absolute_error', metrics=['accuracy'])
 
-#Loss 
+**#Loss **
 Loss menunjukkan seberapa jauh prediksi model dari target sebenarnya. Dalam kasus autoencoder, loss function yang digunakan adalah Mean Absolute Error (MAE), yang mengukur rata-rata selisih absolut antara piksel gambar hasil rekonstruksi dan gambar target (sketsa).
 
 Loss pada model autoencoder menunjukkan nilai **0.1700** menunjukkan bahwa rata-rata kesalahan piksel per channel cukup kecil, yang berarti model mulai bisa merekonstruksi gambar mendekati target, walaupun belum sempurna.
