@@ -40,6 +40,7 @@ Terdiri dari 2 bagian utama :
    model.compile(optimizer='adam', loss='mean_absolute_error', metrics=['accuracy'])
 
 **#Loss **
+
 Loss menunjukkan seberapa jauh prediksi model dari target sebenarnya. Dalam kasus autoencoder, loss function yang digunakan adalah Mean Absolute Error (MAE), yang mengukur rata-rata selisih absolut antara piksel gambar hasil rekonstruksi dan gambar target (sketsa).
 
 Loss pada model autoencoder menunjukkan nilai **0.1700** menunjukkan bahwa rata-rata kesalahan piksel per channel cukup kecil, yang berarti model mulai bisa merekonstruksi gambar mendekati target, walaupun belum sempurna.
